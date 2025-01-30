@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LinkedInBanner (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "LinkedInBanner (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="LinkedInBanner.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LinkedInBanner"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="LinkedInBanner">
+
+    <Grid VerticalAlignment="Stretch">
+
+        <!--Trying to create a background grid - to be done later-->
+        <!--<Grid BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+            <Border Grid.Row="1" Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+            <Border Grid.Row="2" Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+            <Border Grid.Row="3" Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+            <Border Grid.Row="4" Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+            <Border Grid.Row="5" Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+
+        </Grid>-->
+
+        <!--<GridView BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="White">
+          <GridView.ItemContainerStyle>
+              <Style TargetType="GridViewItem" BasedOn="{StaticResource DefaultGridViewItemStyle}">
+                  <Setter Property="Margin" Value="0"/>
+                  <Setter Property="BorderThickness" Value="-1"/>
+                  <Setter Property="BorderBrush" Value="White"/>
+              </Style>
+          </GridView.ItemContainerStyle>
+
+          <GridView.Items>
+              <Border Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+              <Border Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+              <Border Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+              <Border Width="100" Height="100" BorderThickness="2" BorderBrush="Gray"/>
+          </GridView.Items>
+          -->
+        <!--<GridView.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+          </GridView.RowDefinitions>
+          <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>-->
+        <!--
+
+
+      </GridView>-->
+
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,40,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--name-->
+            <Border x:Name="AppTitleBar" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,100,0">
+                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" TextAlignment="Center"
+                           FontSize="20" Margin="0,0,0,0" FontStyle="Oblique" 
+                           FontFamily="Segoe UI" FontWeight="SemiLight">
+                    <Run Text="this banner is a WinUI application " FontSize="20" Foreground="Gray"/>
+                    <Run Text="&#xea62;" FontFamily="Segoe Fluent Icons" Foreground="Gray"/>
+                </TextBlock>
+              <!--<StackPanel Orientation="Horizontal">
+                  <TextBlock x:Name="AppTitle" Text="Guillaume Demicheli" VerticalAlignment="Top" Margin="20,18,0,0" FontSize="25" />
+                  <Frame Background="LightGreen" Width="4px" VerticalAlignment="Stretch" Margin="10,18,8,2"/>
+                  <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="freelance" FontSize="22" Margin="0,18,0,0" FontStyle="Oblique" 
+                             FontFamily="Segoe UI" FontWeight="SemiLight"/>
+              </StackPanel>-->
+          </Border>
+
+            <!--contact-->
+            <StackPanel Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,25,70,25">
+                <Button HorizontalAlignment="Center" FontSize="24" Margin="0,0,0,-5" FontStyle="Oblique" FontFamily="Segoe UI" FontWeight="SemiLight" BorderThickness="0">
+                    <Button.Background>
+                        <SolidColorBrush Color="#1b1f23" Opacity="1"/>
+                    </Button.Background>
+                    <StackPanel Orientation="Horizontal" Padding="5">
+                        <SymbolIcon Symbol="Mail" Margin="50,0,15,0" Foreground="WhiteSmoke"/>
+                        <TextBlock Text="guillaume.demicheli@loctet.com" Foreground="WhiteSmoke" TextAlignment="Center" TextLineBounds="Tight"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <!--Job desc-->
+            <Grid Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Left" RowSpacing="-10" Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Frame Grid.RowSpan="2" HorizontalAlignment="Left" Background="CornflowerBlue" Width="6px" VerticalAlignment="Stretch" Margin="10,10,8,0"/>
+
+                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Software Developer" FontSize="40" Margin="0,0" FontFamily="Segoe UI" FontWeight="SemiBold"/>
+
+                <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Text="Desktop / mobile" FontSize="25" Margin="0,0" Typography.Capitals="AllSmallCaps" FontFamily="Segoe UI" FontWeight="SemiLight"/>
+            </Grid>
+
+            <Border Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="22,40,0,0"
+                  Padding="5"
+                  BorderThickness="0" BorderBrush="WhiteSmoke" CornerRadius="5">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock FontStyle="Italic" TextWrapping="WrapWholeWords" Text="+12 years XP" FontSize="18" FontFamily="Segoe UI" TextDecorations="Underline"/>
+                </StackPanel>
+            </Border>
+
+            <StackPanel Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="1" Margin="50,0,0,0">
+
+                <Border Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" Padding="10,5"
+                      BorderThickness="2" BorderBrush="#80FFFFFF" CornerRadius="20">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock FontStyle="Normal" TextWrapping="WrapWholeWords"
+                                 FontWeight="ExtraLight" FontSize="30" FontFamily="Segoe UI">
+                          <Run Text="need"/>
+                          <Run Text="beautiful" FontWeight="Normal"/>
+                          <Run Text="desktop &amp; mobile apps?"/>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <TextBlock FontSize="45" FontFamily="Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Center" TextLineBounds="TrimToCapHeight">
+                  <Run Text="Windows" FontWeight="Light" CharacterSpacing="-50" Typography.Capitals="AllSmallCaps" Foreground="LightGreen"/>
+                  <Run Text="-" FontWeight="Light" CharacterSpacing="-50" Typography.Capitals="AllSmallCaps" Foreground="LightGoldenrodYellow"/>
+                  <Run Text="Mobile" FontWeight="Light" CharacterSpacing="-50" Typography.Capitals="AllSmallCaps" Foreground="LightBlue"/>
+                  <Run Text=":" FontSize="25" FontWeight="Light" CharacterSpacing="-50" Typography.Capitals="PetiteCaps" Foreground="WhiteSmoke"/>
+                  <Run Text="iOS" FontSize="25" FontWeight="Light" CharacterSpacing="-50" Typography.Capitals="PetiteCaps" Foreground="LightCoral"/>
+                  <Run Text="Android" FontSize="30" FontWeight="Light" CharacterSpacing="-50" Typography.Capitals="AllSmallCaps" Foreground="LightGoldenrodYellow"/>
+                </TextBlock>
+
+                <Border  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-20,0,0"
+                       BorderThickness="0" BorderBrush="WhiteSmoke" CornerRadius="20">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                        <TextBlock FontSize="110" FontFamily="Segoe UI" LineHeight="0" Padding="0" Height="80" TextLineBounds="TrimToCapHeight" CharacterSpacing="-200">
+                          <Run Text="APP" FontWeight="Bold" CharacterSpacing="-50" Typography.Capitals="AllSmallCaps" Foreground="White"/>
+                          <Run Text="Developer" FontWeight="Bold" CharacterSpacing="-50" Typography.Capitals="AllSmallCaps">
+                              <Run.Foreground>
+                                  <LinearGradientBrush EndPoint="1,1">
+                                      <GradientStop Color="LightCoral" Offset="0.4"/>
+                                      <GradientStop Color="LightSeaGreen" Offset="1.0"/>
+                                  </LinearGradientBrush>
+                              </Run.Foreground>
+                          </Run>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" TextLineBounds="TrimToCapHeight" TextAlignment="Center">
+                    <Run Text="UI - UX" FontSize="15" FontWeight="Bold" CharacterSpacing="-50" Typography.Capitals="AllSmallCaps" Foreground="LightGoldenrodYellow"/>
+                    <Run Text="&#xEB52;" FontSize="12" FontWeight="Light" CharacterSpacing="-50" 
+                         FontFamily="Segoe Fluent Icons"
+                         Typography.Capitals="AllSmallCaps" Foreground="LightGoldenrodYellow"/>
+                </TextBlock>
+            </StackPanel>
+
+            <!--technical stack-->
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="4" HorizontalAlignment="Right" Margin="0,0" Grid.Column="2">
+                <Button Margin="4,0" CornerRadius="10,10,0,0" FontSize="30" FontWeight="SemiBold" Background="LightCoral" Foreground="Black"    Padding="15,1" Content="C#"/>
+                <Button Margin="4,0" CornerRadius="10,10,0,0" FontSize="30" FontWeight="SemiBold" Background="LightYellow" Foreground="Black"   Padding="15,1" Content=".NET Core"/>
+                <Button Margin="4,0" CornerRadius="10,10,0,0" FontSize="30" FontWeight="SemiBold" Background="LightGreen" Foreground="Black"    Padding="15,1" Content="WinUI"/>
+                <Button Margin="4,0" CornerRadius="10,10,0,0" FontSize="30" FontWeight="SemiBold" Background="LightBlue" Foreground="Black"     Padding="15,1" Content="MAUI"/>
+                <Button Margin="4,0" CornerRadius="10,10,0,0" FontSize="30" FontWeight="SemiBold" Background="LightSeaGreen" Foreground="Black" Padding="15,1" Content="Xamarin"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
